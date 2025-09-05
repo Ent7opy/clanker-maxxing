@@ -1,0 +1,33 @@
+{
+  "name": "godot-doc-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --watch src --exec ts-node src/server.ts",
+    "build": "tsc -p .",
+    "cli": "ts-node src/cli.ts",
+    "ingest": "ts-node src/ingest.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/community": "^0.3.54",
+    "@langchain/core": "^0.3.74",
+    "@langchain/openai": "^0.6.11",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "jsdom": "^26.1.0",
+    "langchain": "^0.3.33",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "type": "module"
+}
