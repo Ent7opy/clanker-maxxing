@@ -8,8 +8,18 @@ from langchain.vectorstores import FAISS
 from langchain.schema import Document
 from dotenv import load_dotenv
 import re
+import os
 
 load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    try:
+        import streamlit as st
+        api_key = st.secrets["openai_api_key"]
+    except:
+        raise ValueError("OpenAI API key not found in environment variables or Streamlit secrets")
+
+os.environ["OPENAI_API_KEY"] = api_key
 
 embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
 
