@@ -68,5 +68,4 @@ else:
     - Specific details mentioned in the video
     - Summaries of key points
     - Explanations of concepts discussed
-    - And much more!
     """)
